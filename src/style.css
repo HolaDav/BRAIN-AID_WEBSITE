@@ -1,0 +1,228 @@
+/* =========================================
+   BRAIN-AID WEBSITE
+   DESIGN FOUNDATION
+========================================= */
+
+/* 1. DESIGN TOKENS */
+
+:root {
+  /* Brand Colours */
+  --color-primary: #66A1FD;
+  --color-charcoal: #2E2E38;
+  --color-white: #FFFFFF;
+
+  /* Supporting Colours */
+  --color-background: #FFFFFF;
+  --color-surface: #F4F5F7;
+  --color-text: #2E2E38;
+  --color-text-muted: #626270;
+  --color-border: #E1E138;
+
+  /* Typography */
+  --font-display: 'Orbitron', sans-serif;
+  --font-primary: 'Poppins', sans-serif;
+  --font-caption: 'Montserrat', sans-serif;
+
+  /* Font sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5;
+  --text-2xl: 2rem;
+  --text-3xl: 3rem;
+
+  /* Layout */
+  --container-width: 1200px;
+  --page-padding: 24px;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 40px;
+  --space-xl: 64px;
+  --space-2xl: 96px;
+
+  /* Borders and shadows */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-soft: 0 4px 20px rgba(46, 46, 56, 0.06);
+}
+
+/* 2. GLOBAL RESET */
+
+* {
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  line-height: 1.7;
+}
+
+
+/* 3. GENERAL TYPOGRAPHY */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  color: var(--color-charcoal);
+  line-height: 1.2;
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+
+p {
+  margin-top: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-primary);
+}
+
+small,
+.caption {
+  font-family: var(--font-caption);
+}
+
+/* 4. GENERAL LINKS */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 5. IMAGES */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. PAGE CONTAINER */
+
+.container {
+  width: min(
+    100% - (2 * var(--page-padding)),
+    var(--container-width)
+  );
+
+  margin-inline: auto;
+}
+
+/* 7. SECTION SPACING */
+
+.section {
+  padding-block: var(--space-2xl);
+}
+
+/* 8. REUSABLE SECTION STYLES */
+
+.section--soft {
+  background-color: var(--color-surface);
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: var(--space-lg);
+}
+
+.section-heading h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.section-heading p {
+  max-width: 600px;
+}
+
+/* 9. BUTTONS */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px 24px;
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+
+  font-family: var(--font-primary);
+  font-size: var(--text-sm);
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Primary button */
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: #4F7FDD;
+}
+
+/* Secondary button */
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-charcoal);
+  border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-surface);
+}
+
+/* 10. REUSABLE CARDS */
+
+.card {
+  padding: var(--space-md);
+
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-soft);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* 10. RESPONSIVE ADJUSTMENTS */
+
+@media (max-width: 768px) {
+
+  :root {
+    --page-padding: 20px;
+    --space-2xl: 64px;
+    --text-3xl: 2.25rem;
+  }
+
+}
