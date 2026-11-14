@@ -2,10 +2,24 @@ import './style.css'
 // import heroImg from './assets/hero.png'
 
 document.querySelector('#app').innerHTML = `
-<header class="section">
-  <div class="container">
-    <h1>BRAIN-AID</h1>
-    <p> Biomedical Research in Artificial Intelligence and NeuroImaging for Advanced Innovations and Diagnostics</p>
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="#" class="site-logo">
+      BRAIN-AID
+    </a>
+
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
+      Menu
+    </button>
+
+    <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Programmes</a>
+      <a href="#">News & Events</a>
+      <a href="#">Community</a>
+      <a href="#">Get Involved</a>
+    </nav>
   </div>
 </header>
 
@@ -13,32 +27,48 @@ document.querySelector('#app').innerHTML = `
   <section class="section">
     <div class="container">
       <div class="section-heading">
-      <h2>Who We Are</h2>
-      <p>
-        BRAIN-AID is a scientific and educational society advancing neuroscience, neuroimaging and artificial intelligence through education, collaboration and research.
-      </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--soft">
-    <div class="container">
-      <div class="section-heading">
-
-        <a href="#" class="btn btn-primary">
-          Explor Our Programmes
-        </a>
+        <h1>Welcome to BRAIN-AID</h1>
 
         <p>
-          We create structured learning and research opportunities for students and early-career professionals.
+          Advancing neuroscience through research, technology and collaboration.
         </p>
-
-        <a href="#" class="btn btn-secondary">
-          Join Our Community
-        </a>
-        
       </div>
     </div>
   </section>
 </main>
 `
+
+// MOBILE MENU INTERACTION
+
+const menuToggle = document.querySelector('.menu-toggle')
+const navigation = document.querySelector('.nav-links')
+
+menuToggle.addEventListener('click', () => {
+
+  const isOpen = navigation.classList.toggle('is-open')
+
+  menuToggle.setAttribute('aria-expanded', isOpen)
+  menuToggle.setAttribute(
+    'aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu'
+  )
+
+  menuToggle.textContent = isOpen ? 'Close' : 'Menu'
+})
+
+// CLOSE MENU AFTER SELECTING A LINK
+
+navigation.querySelectorAll('a').forEach(link => {
+
+  link.addEventListener('click', () => {
+
+    navigation.classList.remove('is-open')
+
+    menuToggle.setAttribute('aria-expanded', 'false')
+
+    menuToggle.setAttribute('aria-label', 'Open navigation menu')
+
+    menuToggle.textContent = 'Menu'
+
+  })
+
+})
