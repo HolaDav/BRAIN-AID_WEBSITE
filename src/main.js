@@ -4,21 +4,24 @@ import './style.css'
 document.querySelector('#app').innerHTML = `
 <header class="site-header">
   <div class="container nav-container">
-    <a href="#" class="site-logo">
-      BRAIN-AID
+
+    <!-- BRAIN-AID Official Logo -->
+    <a href="/" class="site-logo" aria-label="BRAIN-AID Home">
+      <img src="/assets/brand/brain-aid-logo-blue-transparent_bg.png"/ alt="BRAIN-AID - Biomedical Research in Artificial Intelligence and Neuroimaging for Advanced Innovations and Diagnostics"/>
     </a>
 
+    <!-- Mobile Menu Button -->
     <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">
       Menu
     </button>
 
     <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Programmes</a>
-      <a href="#">News & Events</a>
-      <a href="#">Community</a>
-      <a href="#">Get Involved</a>
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/programmes.html">Programmes</a>
+      <a href="/activities.html">News & Events</a>
+      <a href="/community.html">Community</a>
+      <a href="/contact.html" class="btn btn-primary nav-cta">Get Involved</a>
     </nav>
   </div>
 </header>

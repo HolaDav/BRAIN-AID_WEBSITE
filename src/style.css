@@ -284,10 +284,15 @@ img {
 }
 
 .site-logo {
-  font-family: var(--font-display);
-  font-size: var(--text-lg);
-  font-weight: 800;
-  color: var(--color-charcoal);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.site-logo img {
+  display: block;
+  width: 190px;
+  height: auto;
 }
 
 .nav-links {
@@ -316,6 +321,18 @@ img {
   color: var(--color-charcoal);
   font-size: var(--text-sm);
   cursor: pointer;
+}
+
+/* NAVIGATION CALL TO ACTION */
+
+.nav-links .nav-cta {
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+.nav-links .nav-cta:hover {
+  color: var(--color-white);
+  background-color: #4F7FDD;
 }
 
 /* MOBILE NAVIGATION */
@@ -350,6 +367,10 @@ img {
 
   .nav-links.is-open {
     display: flex;
+  }
+
+  .site-logo {
+    width: 160px;
   }
 }
 
