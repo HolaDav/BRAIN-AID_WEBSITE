@@ -385,3 +385,269 @@ img {
   }
 
 }
+
+/* 13 HOMEPAGE HERO SECTION */
+
+.hero {
+  padding-block: 96px;
+  background-color: var(--color-white);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+/* HERO TEXT */
+
+.hero-content {
+  max-width: 620px;
+}
+
+.hero-label {
+  display: inline-block;
+  margin-bottom: var(--space-md);
+
+  color: #4F7FDD;
+
+  font-family: var(--font-caption);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.hero-content h1 {
+  margin-bottom: var(--space-md);
+
+  font-family: var(--font-primary);
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hero-description {
+  max-width: 580px;
+  margin-bottom: var(--space-lg);
+
+  font-size: var(--text-base);
+  line-height: 1.8;
+}
+
+/* HERO BUTTONS */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* HERO VISUAL */
+
+.hero-visual {
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--space-lg);
+
+  background-color: #EAF2FF;
+  border-radius: var(--radius-lg);
+}
+
+.hero-visual-content {
+  max-width: 340px;
+  text-align: center;
+}
+
+.hero-visual-icon {
+  display: block;
+  margin-bottom: var(--space-md);
+  font-size: 72px;
+}
+
+.hero-visual-content h2 {
+  font-family: var(--font-primary);
+  font-size: var(--text-xl);
+  font-weight: 600;
+}
+
+.hero-visual-content p {
+  font-size: var(--text-sm);
+}
+
+/* HERO IMAGE */
+
+.hero__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: var(--radius-lg);
+}
+
+/* RESPONSIVE HERO */
+
+@media (max-width: 768px) {
+
+  .hero {
+    padding-block: var(--space-xl);
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-visual {
+    min-height: 280px;
+  }
+
+}
+
+/* 14. IMPACT & COMMUNITY SNAPSHOT */
+
+.impact {
+  padding-block: var(--space-2xl);
+  background-color: var(--color-surface);
+}
+
+/* IMPACT SECTION HEADING */
+.impact-heading {
+  max-width: 700px;
+  margin-bottom: var(--space-lg);
+}
+
+.impact-label {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+
+  color: #4F7FDD;
+
+  font-family: var(--font-caption);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.impact-heading h2 {
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-sm);
+  font-size: var(--text-2xl);
+}
+
+.impact-heading p {
+  max-width: 600px;
+}
+
+/* IMPACT STATISTIC GRID */
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-md);
+}
+
+/* IMPACT CARDS */
+
+.impact-card {
+  padding: var(--space-lg);
+
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.impact-card h3 {
+  margin-bottom: var(--space-xs);
+
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+}
+
+.impact-card p {
+  margin-bottom: 0;
+
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+/* RESPONSIVE IMPACT GRID */
+
+@media (max-width: 768px) {
+
+  .impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .impact-card {
+    padding: var(--space-md);
+  }
+
+  .impact-card h3 {
+    font-size: var(--text-2xl);
+  }
+
+}
+
+/* 15. WHO WE ARE */
+
+.about-preview {
+  padding-block: var(--space-2xl);
+  background-color: var(--color-surface);
+}
+
+.about-preview__content {
+  max-width: 800px;
+}
+
+/* SECTION LABEL */
+
+.about-preview__label {
+  display: inline-block;
+  margin-bottom: var(--space-sm);
+
+  color: #4F7FDD;
+
+  font-family: var(--font-caption);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* SECTION HEADING */
+
+.about-preview__content h2 {
+  max-width: 700px;
+  margin-bottom: var(--space-md);
+
+  font-size: var(--text-3xl);
+  line-height: 1.2;
+}
+
+/* SECTION DESCRIPTION */
+
+.about-preview__content p {
+  max-width: 700px;
+  margin-bottom: var(--space-md);
+
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+/* ABOUT SECTION BUTTON */
+
+.about-preview__content .btn {
+  margin-top: var(--space-sm);
+}
